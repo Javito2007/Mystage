@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Estilo del encabezado */
+.header {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #d4b483;
+}
+
+.header h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin-bottom: 10px;
+}
+
+#subtito {
+    padding-inline: 20px;
+    text-align: left;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    background-color: #d4b483;
+    border-top: 12px solid #d4b483;
+    border-block-end: 12px solid #d4b483;
+}
+
+/* Estilo de la galería */
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 10px 0px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #e2dddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #1a1a1a;
+    gap: 10px;
+}
+
+#sip {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding: 10px;
+    text-align: center;
+    background-color: #d4b483;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#sip:hover {
+    background-color: #1a1a1a;
+    color: white;
+    transition: 0.3s;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.box:ntth-child(1) {
+    grid-column-start: span 2;
+}
+
+.box:ntth-child(4) {
+    grid-column-start: span 2;
+}
+
+@media (max-width: 500px) {
+    .gallery {
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box:ntth-child(1) {
+        grid-column-start: span 1;
+    }
+    .box:ntth-child(4) {
+        grid-column-start: span 1;
+    }
+}
+
+/* Inicia el footer */
+.footer {
+    background-color: #16263f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer p {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin: 0;
+}
+
+#autor {
+    font-size: 1.3rem;
+    padding: 10px;
+    text-align: center;
+    border-block-end: 1px #e2dddd solid;
+    margin-top: 10px;
+}
+
+#rd {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: left;
+    margin-top: 10px;
+    padding-inline: 20px;
+}
+
+.cuenta {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: left;
+    margin-top: 10px;
+    padding-inline: 20px;
+
+}
+
+#redes img {
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+    display: inline-block; /* Asegura que los íconos estén en línea */
+}
+
+#redes {
+    font-size: 1.6rem;
+    padding: 0px;
+    text-align: left;
+    margin-top: 0px;
+    display: flex;
+}
+
+#redes {
+    gap: 0; /* Elimina el espacio entre los íconos si usas flexbox */
+    justify-content: center; /* Centra los íconos si es necesario */
+}
+
+#rede {
+    font-size: 1.6rem;
+    padding: 0px;
+    text-align: left;
+    margin-top: 0px;
+    display: flex;
+}
+
+/* Estilo para los íconos de redes sociales */
+#redes .cuenta a i {
+    font-size: 2rem; /* Tamaño del ícono */
+    color: #ffffff; /* Cambia este color al que desees */
+    transition: color 0.3s ease; /* Efecto de transición al pasar el mouse */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+#redes .cuenta a i:hover {
+    color: #000000; /* Cambia el color al pasar el mouse */
+}
