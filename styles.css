@@ -4,13 +4,19 @@
     box-sizing: border-box;
 }
 
+.comic-neue-light {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+
 body {
     background-color: #f4f4f4;
 }
 
 /* Estilo del encabezado */
 .header {
-    background-color: #1a1a1a;
+    background-color: #16263f;
     color: white;
     text-align: center;
     padding: 20px;
@@ -171,6 +177,20 @@ body {
     margin-right: 10px; /* Espacio entre el ícono y el texto */
 }
 
-#redes .cuenta a i:hover {
-    color: #000000; /* Cambia el color al pasar el mouse */
+#aboutaut {
+    border-radius: 2% 2% 0% 0%;
+    background-color: #8fb1ae;
 }
+
+#aboutaut img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+#aboutaut {
+    font-size: 1.3rem;
+    padding: 10px;
+    text-align: center;
+    border-block-end: 1px #e2dddd solid;
+    margin-top: 10px;
+}
+
