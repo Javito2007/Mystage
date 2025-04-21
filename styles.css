@@ -37,80 +37,35 @@ body {
     border-block-end: 12px solid #d4b483;
 }
 
-/* Estilo de la galería */
+/* Galería estilo Masonry */
 .gallery {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px;
-    grid-gap: 20px;
-    padding: 10px 0px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); /* Columnas automáticas */
+    grid-auto-flow:row; /* Permite que los elementos llenen los espacios vacíos */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 20px;
 }
 
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #e2dddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #1a1a1a;
-    gap: 10px;
-}
-
-#sip {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-    padding: 10px;
-    text-align: center;
-    background-color: #d4b483;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-#sip:hover {
-    background-color: #1a1a1a;
-    color: white;
-    transition: 0.3s;
-}
-
+/* Imágenes con diferentes alturas */
 .gallery img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Mantiene la proporción original */
     border-radius: 10px;
-}
-
-.box:ntth-child(1) {
-    grid-column-start: span 2;
-}
-
-.box:ntth-child(4) {
-    grid-column-start: span 2;
-}
-
-@media (max-width: 500px) {
-    .gallery {
-        padding: 30px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .box:ntth-child(1) {
-        grid-column-start: span 1;
-    }
-    .box:ntth-child(4) {
-        grid-column-start: span 1;
-    }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Asegura que las imágenes se ajusten al espacio */
 }
 
 /* Inicia el footer */
-.footer {
+footer {
     background-color: #16263f;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
 }
-.footer p {
+footer p {
     font-size: clamp(0.8rem, 2vw, 1rem);
     margin: 0;
 }
@@ -119,7 +74,7 @@ body {
     font-size: 1.3rem;
     padding: 10px;
     text-align: center;
-    border-block-end: 1px #e2dddd solid;
+    border-block-end: 1px #ffffff solid;
     margin-top: 10px;
 }
 
