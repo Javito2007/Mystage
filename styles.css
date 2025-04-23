@@ -35,24 +35,26 @@ body {
     background-color: #d4b483;
     border-top: 12px solid #d4b483;
     border-block-end: 12px solid #d4b483;
+    margin-bottom: 10px;
 }
 
 /* Galería estilo Masonry */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); /* Columnas automáticas */
-    grid-auto-flow:row; /* Permite que los elementos llenen los espacios vacíos */
-    gap: 10px; /* Espacio entre las imágenes */
-    padding: 20px;
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
 }
 
-/* Imágenes con diferentes alturas */
-.gallery img {
-    width: 100%;
-    height: auto; /* Mantiene la proporción original */
+img {
+    max-width: 100%;
+    margin-bottom: 0.2em;
+    display: block;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    object-fit: cover; /* Asegura que las imágenes se ajusten al espacio */
+}
+
+.gallery {
+
+    columns: 2 32px;
+    column-gap: 0.2em;
 }
 
 /* Inicia el footer */
